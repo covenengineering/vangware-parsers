@@ -1,0 +1,7 @@
+{
+	"$schema": "https://typedoc.org/schema.json",
+	"cname": "parsers.vangware.com",
+	"entryPoints": ["./src"],
+	"extends": ["./node_modules/@vangware/configs/typedoc.json"],
+	"name": "@vangware/parsers"
+}
