@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 -   This project adheres to [Semantic Versioning][semver].
 -   This project uses [Gitmoji][gitmoji]
 
+## 1.0.1
+
+-   :wrench: fix some bad configs in `package.json`.
+
 ## 1.0.0
 
 -   :sparkles: Initial commit.
