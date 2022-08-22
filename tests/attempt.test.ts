@@ -17,13 +17,13 @@ export default [
 	{
 		given: "a function that could throw, not throwing",
 		must: "return expected value",
-		received: safeFunction(false),
-		wanted: "success",
+		received: () => safeFunction(false),
+		wanted: () => "success",
 	},
 	{
 		given: "a function that could throw, throwing",
 		must: "return undefined",
-		received: safeFunction(true),
-		wanted: undefined,
+		received: () => safeFunction(true),
+		wanted: () => undefined,
 	},
 ] as Tests<string | undefined>;
