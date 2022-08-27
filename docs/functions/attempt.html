@@ -20,18 +20,20 @@
 <div class="tsd-comment tsd-typography"><p>Wrapper for <code>try</code>/<code>catch</code> that tries to run a function and silences the
 <code>throw</code>s by returning <code>undefined</code> instead.</p>
 
-<h3>Example</h3><pre><code class="language-typescript"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-4">willFail</span><span class="hl-1"> = () </span><span class="hl-6">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">throw</span><span class="hl-1"> </span><span class="hl-6">new</span><span class="hl-1"> </span><span class="hl-7">Error</span><span class="hl-1">(</span><span class="hl-3">&quot;fail&quot;</span><span class="hl-1">);</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-8">safeWillFail</span><span class="hl-1"> = </span><span class="hl-4">attempt</span><span class="hl-1">(</span><span class="hl-2">willFail</span><span class="hl-1">);</span><br/><span class="hl-4">safeWillFail</span><span class="hl-1">(); </span><span class="hl-5">// undefined</span>
+<h3>Example</h3><pre><code class="language-typescript"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-4">willFail</span><span class="hl-1"> = () </span><span class="hl-6">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">throw</span><span class="hl-1"> </span><span class="hl-6">new</span><span class="hl-1"> </span><span class="hl-4">Error</span><span class="hl-1">(</span><span class="hl-3">&quot;fail&quot;</span><span class="hl-1">);</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">safeWillFail</span><span class="hl-1"> = </span><span class="hl-4">attempt</span><span class="hl-1">(</span><span class="hl-2">willFail</span><span class="hl-1">);</span><br/><span class="hl-4">safeWillFail</span><span class="hl-1">(); </span><span class="hl-5">// undefined</span>
 </code></pre>
 
 <h3>Returns</h3><p>Function wrapped in <code>try</code>/<code>catch</code>.</p>
 </div>
 <div class="tsd-type-parameters">
 <h4 class="tsd-type-parameters-title">Type Parameters</h4>
+<section class="tsd-panel tsd-type-parameters">
+<h4>Type Parameters</h4>
 <ul class="tsd-type-parameters">
 <li>
 <h4>Arguments<span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h4></li>
 <li>
-<h4>Output</h4></li></ul></div>
+<h4>Output</h4></li></ul></section></div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
