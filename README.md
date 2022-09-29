@@ -7,12 +7,25 @@
 👁️‍🗨️ Parsers without nonsense.
 
 Instead of throwing or returning values like `NaN`, the parsers in this library
-either return the expected parsed value, or `undefined` (making use of the
+either return the expected parsed value or `undefined` (making use of the
 [Maybe](https://github.com/vangware/types/blob/main/lib/Maybe.ts) type).
 
 ## Usage
 
 ### 📦 Node
+
+First:
+
+```bash
+# If you use npm
+npm install @vangware/parsers
+# If you use pnpm
+pnpm add @vangware/parsers
+# If you use yarn
+yarn add @vangware/parsers
+```
+
+And then:
 
 ```typescript
 import { parseDecimal } from "@vangware/parsers";
@@ -32,9 +45,9 @@ parseDecimal("nope"); // undefined
 
 ## Documentation
 
-Documentation can be found [HERE][documentation]. It is auto-generated with
-[typedoc][typedoc] based on the JSDocs and the types in the source. Shouldn't be
-necessary to read this, code editors like [VS Code][vscode] integrate the
+Documentation is available [HERE][documentation]. It is auto-generated with
+[typedoc][typedoc] based on the JSDocs and the types in the source. It shouldn't
+be necessary to read this. Code editors like [VS Code][vscode] integrate the
 documentation in the UI.
 
 ## Changelog
