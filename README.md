@@ -1,8 +1,7 @@
 <img alt="Vangware's Parsers" src="./logo.svg" height="128" />
 
-![Build Status][build-status-badge] ![Coverage][coverage-badge]
-![License][license-badge] ![NPM Version][npm-version-badge]
-![Open Issues][open-issues-badge]
+![Coverage][coverage-badge] ![License][license-badge]
+![NPM Version][npm-version-badge] ![Open Issues][open-issues-badge]
 
 👁️‍🗨️ Parsers without nonsense.
 
@@ -60,8 +59,6 @@ Test coverage can be found [HERE][coverage].
 
 <!-- Reference -->
 
-[build-status-badge]:
-	https://img.shields.io/github/workflow/status/vangware/parsers/Test%20&%20Coverage.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://github.com/vangware/parsers/actions
 [changelog]: https://github.com/vangware/parsers/blob/main/CHANGELOG.md
 [coverage-badge]:
 	https://img.shields.io/coveralls/github/vangware/parsers.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://coveralls.io/github/vangware/parsers
