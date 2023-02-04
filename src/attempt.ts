@@ -22,7 +22,7 @@ export const attempt =
 		wrappedFunction: GenericFunction<Arguments, Output>,
 	) =>
 	(...parameters: Arguments): Maybe<Output> => {
-		// eslint-disable-next-line functional/no-try-statement
+		// eslint-disable-next-line functional/no-try-statements
 		try {
 			return wrappedFunction(...parameters);
 		} catch {
