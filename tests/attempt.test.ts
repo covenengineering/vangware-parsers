@@ -2,9 +2,9 @@ import type { Tests } from "@vangware/test";
 import { attempt } from "../src/attempt.js";
 
 const throwingFunction = (shouldThrow: boolean) => {
-	// eslint-disable-next-line functional/no-conditional-statement
+	// eslint-disable-next-line functional/no-conditional-statements
 	if (shouldThrow) {
-		// eslint-disable-next-line functional/no-throw-statement
+		// eslint-disable-next-line functional/no-throw-statements
 		throw new Error("fail");
 	} else {
 		return "success";
