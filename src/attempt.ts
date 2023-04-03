@@ -1,4 +1,4 @@
-import type { GenericFunction, Maybe, ReadOnlyArray } from "@vangware/types";
+import type { Function, Maybe, ReadOnlyArray } from "@vangware/types";
 
 /**
  * Wrapper for `try`/`catch` that tries to run a function and silences the
@@ -19,7 +19,7 @@ import type { GenericFunction, Maybe, ReadOnlyArray } from "@vangware/types";
  */
 export const attempt =
 	<Arguments extends ReadOnlyArray, Output>(
-		wrappedFunction: GenericFunction<Arguments, Output>,
+		wrappedFunction: Function<Arguments, Output>,
 	) =>
 	(...parameters: Arguments): Maybe<Output> => {
 		// eslint-disable-next-line functional/no-try-statements
