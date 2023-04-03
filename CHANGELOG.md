@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 -   This project adheres to [Semantic Versioning][semver].
 -   This project uses [Gitmoji][gitmoji]
 
+## 1.1.0
+
+-   ⬆️ dependency upgrade.
+-   ✨ add new `parseFloatingPoint` function.
+-   🏗️ update `parseJSON` to use new `JSONValue` type.
+
 ## 1.0.27
 
 -   ⬆️ dependency upgrade.
