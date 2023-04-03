@@ -1,3 +1,4 @@
+import type { JSONValue } from "@vangware/types";
 import { attempt } from "./attempt.js";
 
 /**
@@ -28,6 +29,6 @@ const omitProto = (key: string, value: unknown) =>
  * @returns Parsed string or `undefined` if invalid JSON.
  */
 export const parseJSON = attempt(
-	<Output = unknown>(string: string) =>
+	<Output extends JSONValue = JSONValue>(string: string) =>
 		JSON.parse(string, omitProto) as Output,
 );
