@@ -1,4 +1,4 @@
-import type { Maybe } from "@vangware/types";
+import { undefineNaN } from "./undefineNaN.js";
 
 /**
  * Safe `parseFloat` alternative.
@@ -13,11 +13,10 @@ import type { Maybe } from "@vangware/types";
  * parseFloatingPoint(13.10); // 13.1
  * parseFloatingPoint("invalid"); // undefined
  * ```
+ * @see {@link undefineNaN}
+ *
  * @param string String to parse.
  * @returns Parsed number or `undefined` if invalid.
  */
-export const parseFloatingPoint = (string: string) => {
-	const float = parseFloat(string);
-
-	return (Number.isNaN(float) ? undefined : float) as Maybe<number>;
-};
+export const parseFloatingPoint = (string: string) =>
+	undefineNaN(parseFloat(string));
