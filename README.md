@@ -36,7 +36,7 @@ parseDecimal("nope"); // undefined
 ### 🦕 Deno
 
 ```typescript
-import { parseDecimal } from "https://cdn.skypack.dev/@vangware/parsers?dts";
+import { parseDecimal } from "https://esm.sh/@vangware/parsers";
 
 parseDecimal("101"); // 101
 parseDecimal("nope"); // undefined

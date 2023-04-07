@@ -1,10 +1,12 @@
 import type { Function, Maybe, ReadOnlyArray } from "@vangware/types";
 
 /**
- * Wrapper for `try`/`catch` that tries to run a function and silences the
- * `throw`s by returning `undefined` instead.
+ * Wrapper for `try`/`catch`.
  *
  * @category Common
+ * @remarks
+ * This functions tries to run a function and silences the `throw`s by wrapping
+ * it with a `try/catch` and returning `undefined` instead.
  * @example
  * ```typescript
  * const willFail = () => {
@@ -14,6 +16,8 @@ import type { Function, Maybe, ReadOnlyArray } from "@vangware/types";
  * const safeWillFail = attempt(willFail);
  * safeWillFail(); // undefined
  * ```
+ *
+ * @template Arguments Type of the arguments of the function to be wrapped.
  * @param wrappedFunction Function to be wrapped.
  * @returns Function wrapped in `try`/`catch`.
  */
