@@ -19,8 +19,10 @@
 <ul class="tsd-signatures tsd-kind-function">
 <li class="tsd-signature tsd-anchor-link" id="attempt">attempt<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Arguments</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Output</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>wrappedFunction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Arguments</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Output</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>parameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Arguments</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Maybe</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Output</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><a href="#attempt" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Wrapper for <code>try</code>/<code>catch</code> that tries to run a function and silences the
-<code>throw</code>s by returning <code>undefined</code> instead.</p>
+<div class="tsd-comment tsd-typography"><p>Wrapper for <code>try</code>/<code>catch</code>.</p>
+
+<h3>Remarks</h3><p>This functions tries to run a function and silences the <code>throw</code>s by wrapping
+it with a <code>try/catch</code> and returning <code>undefined</code> instead.</p>
 
 <h3>Example</h3><pre><code class="language-typescript"><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-5">willFail</span><span class="hl-1"> = () </span><span class="hl-6">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-3">throw</span><span class="hl-1"> </span><span class="hl-6">new</span><span class="hl-1"> </span><span class="hl-5">Error</span><span class="hl-1">(</span><span class="hl-2">&quot;fail&quot;</span><span class="hl-1">);</span><br/><span class="hl-1">};</span><br/><br/><span class="hl-6">const</span><span class="hl-1"> </span><span class="hl-7">safeWillFail</span><span class="hl-1"> = </span><span class="hl-5">attempt</span><span class="hl-1">(</span><span class="hl-4">willFail</span><span class="hl-1">);</span><br/><span class="hl-5">safeWillFail</span><span class="hl-1">(); </span><span class="hl-0">// undefined</span>
 </code></pre>
@@ -31,7 +33,9 @@
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameters">
 <li>
-<h4>Arguments<span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h4></li>
+<h4>Arguments<span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h4>
+<div class="tsd-comment tsd-typography"><p>Type of the arguments of the function to be wrapped.</p>
+</div></li>
 <li>
 <h4>Output</h4></li></ul></section>
 <div class="tsd-parameters">
@@ -54,7 +58,7 @@
 <h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span>parameters: <span class="tsd-signature-type" data-tsd-kind="Type parameter">Arguments</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Maybe</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Output</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/vangware/parsers/blob/main/src/attempt.ts#L21">attempt.ts:21</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/vangware/parsers/blob/main/src/attempt.ts#L25">attempt.ts:25</a></li></ul></aside></li></ul></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -85,5 +89,6 @@
 <li class="tsd-kind-function"><a href="parseHexadecimal.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>parse<wbr/>Hexadecimal</a></li>
 <li class="tsd-kind-function"><a href="parseInteger.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>parse<wbr/>Integer</a></li>
 <li class="tsd-kind-function"><a href="parseJSON.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>parseJSON</a></li>
-<li class="tsd-kind-function"><a href="parseOctal.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>parse<wbr/>Octal</a></li></ul></nav></div></div>
+<li class="tsd-kind-function"><a href="parseOctal.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>parse<wbr/>Octal</a></li>
+<li class="tsd-kind-function"><a href="undefineNaN.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>undefine<wbr/>NaN</a></li></ul></nav></div></div>
 <div class="overlay"></div><script src="../assets/main.js"></script></body></html>

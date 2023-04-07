@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 -   This project adheres to [Semantic Versioning][semver].
 -   This project uses [Gitmoji][gitmoji]
 
+## 1.2.0
+
+-   ⬆️ dependency upgrade.
+-   ✨ add new `undefineNaN` function.
+-   📄 improve docs a little.
+
 ## 1.1.0
 
 -   ⬆️ dependency upgrade.

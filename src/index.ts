@@ -6,3 +6,4 @@ export { parseHexadecimal } from "./parseHexadecimal.js";
 export { parseInteger } from "./parseInteger.js";
 export { parseJSON } from "./parseJSON.js";
 export { parseOctal } from "./parseOctal.js";
+export { undefineNaN } from "./undefineNaN.js";
