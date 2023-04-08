@@ -3,5 +3,5 @@
 	"cname": "parsers.vangware.com",
 	"entryPoints": ["./src"],
 	"extends": ["@vangware/configs/typedoc.json"],
-	"name": "@vangware/parsers"
+	"name": "Parsers by Vangware"
 }
