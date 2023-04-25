@@ -13,18 +13,17 @@ either return the expected parsed value or `undefined` (making use of the
 
 ### 📦 Node
 
-First:
+Install `@vangware/parsers` as a dependency:
 
 ```bash
-# If you use npm
-npm install @vangware/parsers
-# If you use pnpm
 pnpm add @vangware/parsers
-# If you use yarn
+# or
+npm install @vangware/parsers
+# or
 yarn add @vangware/parsers
 ```
 
-And then:
+Import it and use it:
 
 ```typescript
 import { parseDecimal } from "@vangware/parsers";
@@ -35,27 +34,33 @@ parseDecimal("nope"); // undefined
 
 ### 🦕 Deno
 
+Import `@vangware/parsers` using the `npm:` prefix, and use it directly:
+
 ```typescript
-import { parseDecimal } from "https://esm.sh/@vangware/parsers";
+import { parseDecimal } from "npm:@vangware/parsers";
 
 parseDecimal("101"); // 101
 parseDecimal("nope"); // undefined
 ```
 
-## Documentation
+### 🌎 Browser
 
-Documentation is available [HERE][documentation]. It is auto-generated with
-[typedoc][typedoc] based on the JSDocs and the types in the source. It shouldn't
-be necessary to read this. Code editors like [VS Code][vscode] integrate the
-documentation in the UI.
+Import `@vangware/parsers` using [esm.sh][esm.sh], and use it directly:
 
-## Changelog
+```html
+<script type="module">
+	import { parseDecimal } from "https://esm.sh/@vangware/parsers";
 
-Changelog can be found [HERE][changelog].
+	parseDecimal("101"); // 101
+	parseDecimal("nope"); // undefined
+</script>
+```
 
-## Test coverage
+## Useful links
 
-Test coverage can be found [HERE][coverage].
+-   📝 [Documentation][documentation]: TypeDoc generated documentation.
+-   ⏳ [Changelog][changelog]: List of changes between versions.
+-   ✅ [Tests Coverage][coverage]: Coveralls page with tests coverage.
 
 <!-- Reference -->
 
@@ -64,11 +69,10 @@ Test coverage can be found [HERE][coverage].
 	https://img.shields.io/coveralls/github/vangware/parsers.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://coveralls.io/github/vangware/parsers
 [coverage]: https://coveralls.io/github/vangware/parsers
 [documentation]: https://parsers.vangware.com
+[esm.sh]: https://esm.sh
 [license-badge]:
 	https://img.shields.io/npm/l/@vangware/parsers.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://github.com/vangware/parsers/blob/main/LICENSE
 [npm-version-badge]:
 	https://img.shields.io/npm/v/@vangware/parsers.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://npm.im/@vangware/parsers
 [open-issues-badge]:
 	https://img.shields.io/github/issues/vangware/parsers.svg?style=for-the-badge&labelColor=666&color=0a8&link=https://github.com/vangware/parsers/issues
-[typedoc]: https://typedoc.org/
-[vscode]: https://code.visualstudio.com/
