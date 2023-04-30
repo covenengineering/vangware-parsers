@@ -51,4 +51,4 @@ export default [
 		received: () => parseJSON("1"),
 		wanted: () => 1,
 	},
-] as Tests<Primitive | ReadOnlyArray | ReadOnlyRecord>;
+] satisfies Tests<Primitive | ReadOnlyArray | ReadOnlyRecord>;

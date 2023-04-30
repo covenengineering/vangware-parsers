@@ -20,4 +20,4 @@ export default [
 		received: () => parseHexadecimal("invalid"),
 		wanted: () => undefined,
 	},
-] as Tests<number | undefined>;
+] satisfies Tests<number | undefined>;

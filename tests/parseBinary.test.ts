@@ -20,4 +20,4 @@ export default [
 		received: () => parseBinary("invalid"),
 		wanted: () => undefined,
 	},
-] as Tests<number | undefined>;
+] satisfies Tests<number | undefined>;
