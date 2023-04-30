@@ -26,4 +26,4 @@ export default [
 		received: () => safeFunction(true),
 		wanted: () => undefined,
 	},
-] as Tests<string | undefined>;
+] satisfies Tests<string | undefined>;

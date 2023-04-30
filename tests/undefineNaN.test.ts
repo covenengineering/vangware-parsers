@@ -15,4 +15,4 @@ export default [
 		received: () => undefineNaN(NaN),
 		wanted: () => undefined,
 	},
-] as Tests<Maybe<number>>;
+] satisfies Tests<Maybe<number>>;

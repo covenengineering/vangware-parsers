@@ -28,4 +28,4 @@ export default [
 		received: () => parseDecimal("invalid"),
 		wanted: () => undefined,
 	},
-] as Tests<number | undefined>;
+] satisfies Tests<number | undefined>;
