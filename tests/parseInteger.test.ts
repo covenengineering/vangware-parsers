@@ -1,4 +1,5 @@
 import type { Tests } from "@vangware/test";
+import type { Maybe } from "@vangware/types";
 import { parseInteger } from "../src/parseInteger.js";
 
 const parseDecimal = parseInteger(10);
@@ -28,4 +29,4 @@ export default [
 		received: () => parseDecimal("invalid"),
 		wanted: () => undefined,
 	},
-] satisfies Tests<number | undefined>;
+] satisfies Tests<Maybe<number>>;

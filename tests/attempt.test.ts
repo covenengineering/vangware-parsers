@@ -1,4 +1,5 @@
 import type { Tests } from "@vangware/test";
+import type { Maybe } from "@vangware/types";
 import { attempt } from "../src/attempt.js";
 
 const throwingFunction = (shouldThrow: boolean) => {
@@ -26,4 +27,4 @@ export default [
 		received: () => safeFunction(true),
 		wanted: () => undefined,
 	},
-] satisfies Tests<string | undefined>;
+] satisfies Tests<Maybe<string>>;
