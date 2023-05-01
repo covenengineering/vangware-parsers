@@ -1,4 +1,5 @@
 import type { Tests } from "@vangware/test";
+import type { Maybe } from "@vangware/types";
 import { parseOctal } from "../src/parseOctal.js";
 
 export default [
@@ -20,4 +21,4 @@ export default [
 		received: () => parseOctal("invalid"),
 		wanted: () => undefined,
 	},
-] satisfies Tests<number | undefined>;
+] satisfies Tests<Maybe<number>>;
