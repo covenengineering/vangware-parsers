@@ -1,22 +1,6 @@
 import type { JSONValue } from "@vangware/types";
 import { attempt } from "./attempt.js";
-
-/**
- * Custom reviver that omits `"__proto__"` for safer parsing.
- *
- * @category Internal
- * @example
- * ```typescript
- * JSON.parse('{"__proto__":"😈"}', omitProto); // {}
- * ```
- * @see {@link parseJSON}
- *
- * @param key Current key.
- * @param value Current value.
- * @returns The current value or `undefined` if the key is `"__proto__"`.
- */
-const omitProtoReviver = (key: string, value: unknown) =>
-	key === "__proto__" ? undefined : value;
+import { omitProtoReviver } from "./omitProtoReviver.js";
 
 /**
  * Safely parses a JSON string or returns `undefined` if is invalid.
@@ -31,6 +15,7 @@ const omitProtoReviver = (key: string, value: unknown) =>
  * parseJSON("invalid"); // undefined
  * ```
  * @see {@link attempt}
+ * @see {@link omitProtoReviver}
  *
  * @template Output Generic of the output (has to be a `JSONValue`).
  * @param string String to be parsed.
