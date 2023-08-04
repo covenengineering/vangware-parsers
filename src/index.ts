@@ -1,4 +1,5 @@
 export { attempt } from "./attempt.js";
+export { omitProtoReviver } from "./omitProtoReviver.js";
 export { parseBinary } from "./parseBinary.js";
 export { parseDecimal } from "./parseDecimal.js";
 export { parseFloatingPoint } from "./parseFloatingPoint.js";
