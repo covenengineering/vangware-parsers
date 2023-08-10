@@ -7,7 +7,7 @@
 
 Instead of throwing or returning values like `NaN`, the parsers in this library
 either return the expected parsed value or `undefined` (making use of the
-[Maybe](https://github.com/vangware/types/blob/main/lib/Maybe.ts) type).
+[Maybe](https://types.vangware.com/types/Maybe.html) type).
 
 ## Usage
 

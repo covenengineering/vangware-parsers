@@ -29,7 +29,7 @@ export default [
 	},
 	{
 		given: "a JSON with an array with numbers",
-		must: "return empty array",
+		must: "return array",
 		received: () => parseJSON("[1,2,3]"),
 		wanted: () => [1, 2, 3],
 	},
